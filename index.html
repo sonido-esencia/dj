@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sonido Esencia de Niña – DJ y Sonido para tus Eventos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="DJ y sonido profesional para fiestas, XV años, bodas y eventos en CDMX y alrededores. Sonido Esencia de Niña: ambiente, animación y buena vibra.">
+  <style>
+    :root {
+      --rosa: #ff4fa3;
+      --turquesa: #00d4c7;
+      --lila: #c285ff;
+      --negro: #0c0c12;
+      --gris-oscuro: #151521;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f1630 0, #05050a 55%, #000 100%);
+      color: var(--blanco);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ------- Layout base ------- */
+
+    .container {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(5, 5, 15, 0.9);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      height: 54px;
+      width: auto;
+    }
+
+    .brand-text {
+      font-weight: 700;
+      font-size: 1.05rem;
+      line-height: 1.1;
+    }
+
+    .brand-text span {
+      display: block;
+    }
+
+    .brand-main {
+      color: var(--rosa);
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: #e0e0ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 3px;
+      color: #f5f5ff;
+      opacity: 0.8;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--rosa), var(--turquesa));
+      border-radius: 999px;
+      transition: width 0.25s;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, var(--rosa), var(--turquesa));
+      color: #05030a;
+      box-shadow: 0 0 16px rgba(255, 79, 163, 0.4);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 0 22px rgba(255, 79, 163, 0.6);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #f0f0ff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-1px);
+    }
+
+    main {
+      padding-bottom: 60px;
+    }
+
+    section {
+      padding: 48px 0;
+    }
+
+    h1, h2, h3 {
+      font-family: "Poppins", system-ui, sans-serif;
+    }
+
+    h2.section-title {
+      font-size: 1.7rem;
+      margin-bottom: 8px;
+    }
+
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      color: var(--turquesa);
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      color: #cccaf6;
+      font-size: 0.95rem;
+      max-width: 600px;
+    }
+
+    /* ------- Hero ------- */
+
+    .hero {
+      padding-top: 38px;
+      padding-bottom: 52px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--turquesa);
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      line-height: 1.08;
+      margin-bottom: 10px;
+    }
+
+    .hero-title-highlight {
+      background: linear-gradient(135deg, var(--rosa), var(--turquesa));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-text {
+      font-size: 0.98rem;
+      color: #e2e2ff;
+      max-width: 520px;
+      margin-bottom: 18px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+      font-size: 0.78rem;
+    }
+
+    .hero-badge {
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(10,10,22,0.7);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: #cfcffb;
+    }
+
+    .hero-note strong {
+      color: var(--rosa);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, #29263c 0, #151521 55%, #090910 100%);
+      border-radius: 22px;
+      padding: 18px 18px 16px;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 0 0, rgba(255,79,163,0.18), transparent 60%),
+        radial-gradient(circle at 100% 0, rgba(0,212,199,0.22), transparent 60%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .hero-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .hero-card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-card-tag {
+      font-size: 0.7rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.1);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 16px;
+      font-size: 0.78rem;
+      margin-bottom: 16px;
+      color: #eeecff;
+    }
+
+    .hero-stat span {
+      display: block;
+    }
+
+    .hero-stat-label {
+      opacity: 0.7;
+    }
+
+    .hero-stat-value {
+      font-weight: 600;
+    }
+
+    .hero-img-wrapper {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: #050506;
+    }
+
+    .hero-img-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ------- Paquetes ------- */
+
+    .cards-grid {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #151521, #090910);
+      border-radius: 18px;
+      padding: 16px 16px 15px;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 14px 26px rgba(0,0,0,0.65);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255,79,163,0.18), transparent 55%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--turquesa);
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #fff5ff;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+      font-size: 0.75rem;
+    }
+
+    .chip {
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(7,7,20,0.7);
+    }
+
+    .card ul {
+      list-style: none;
+      font-size: 0.85rem;
+      color: #dedcff;
+      margin-bottom: 6px;
+    }
+
+    .card ul li::before {
+      content: "★";
+      color: var(--rosa);
+      margin-right: 6px;
+      font-size: 0.7rem;
+    }
+
+    .card-footer {
+      font-size: 0.8rem;
+      margin-top: 8px;
+      color: #bfbff8;
+    }
+
+    /* ------- Galería ------- */
+
+    .gallery-grid {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+
+    .gallery-item {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: #050506;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-label {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(5,5,15,0.8);
+      backdrop-filter: blur(8px);
+      font-size: 0.75rem;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    /* ------- Opiniones ------- */
+
+    .testimonials-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .testimonial {
+      background: linear-gradient(145deg, #151521, #090910);
+      border-radius: 18px;
+      padding: 14px 16px 14px;
+      border: 1px solid rgba(255,255,255,0.16);
+      position: relative;
+      overflow: hidden;
+      font-size: 0.86rem;
+      color: #f5f4ff;
+    }
+
+    .testimonial::before {
+      content: "“";
+      position: absolute;
+      font-size: 3.5rem;
+      opacity: 0.08;
+      right: 14px;
+      top: -6px;
+    }
+
+    .testimonial-name {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--turquesa);
+    }
+
+    .review-stars {
+      color: #ffd769;
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+    }
+
+    .maps-cta {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #d4d4ff;
+    }
+
+    .maps-cta span {
+      opacity: 0.85;
+    }
+
+    /* ------- Contacto / Footer ------- */
+
+    .contact-grid {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    .contact-info {
+      font-size: 0.9rem;
+      color: #e0e0ff;
+    }
+
+    .contact-row {
+      margin-top: 8px;
+    }
+
+    .contact-row strong {
+      color: var(--turquesa);
+      margin-right: 4px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .social-links {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+
+    .social-links a {
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(10,10,22,0.7);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 14px 0 22px;
+      font-size: 0.78rem;
+      color: #b7b7df;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--turquesa);
+    }
+
+    /* ------- Responsive ------- */
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 30px;
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      header {
+        position: static;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="nav-left">
+        <!-- LOGO -->
+        <img src="img/logo-esencia.png" alt="Sonido Esencia de Niña" class="logo">
+        <div class="brand-text">
+          <span class="brand-main">Esencia de Niña</span>
+          <span class="brand-sub">Sonido &amp; DJ para tus eventos</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#paquetes">Paquetes</a>
+        <a href="#galeria">Montajes</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a
+        href="https://wa.me/525572862663?text=Hola%20vengo%20de%20tu%20p%C3%A1gina%20web%20y%20quiero%20cotizar%20un%20evento"
+        class="btn"
+        target="_blank"
+        rel="noopener"
+      >
+        Reservar por WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-eyebrow">Sonido, DJ y animación</div>
+        <h1 class="hero-title">
+          Ponemos la <span class="hero-title-highlight">esencia</span> y la fiesta a tu evento.
+        </h1>
+        <p class="hero-text">
+          Sonido Esencia de Niña es un concepto fresco, con audio profesional, iluminación y animación pensada
+          para que tus invitados no dejen la pista. Nos adaptamos a fiestas infantiles, XV años, bautizos,
+          cumpleaños y más.
+        </p>
+
+        <div class="hero-badges">
+          <div class="hero-badge">🎧 DJ en vivo</div>
+          <div class="hero-badge">🔊 Audio profesional</div>
+          <div class="hero-badge">💖 Trato cercano y confiable</div>
+        </div>
+
+        <div class="hero-actions">
+          <a
+            href="https://wa.me/525572862663?text=Hola%20Esencia%20de%20Ni%C3%B1a,%20quiero%20informaci%C3%B3n%20de%20tus%20paquetes"
+            class="btn"
+            target="_blank"
+            rel="noopener"
+          >
+            Cotizar mi evento
+          </a>
+          <span class="hero-note">Respuesta rápida y atención personalizada por <strong>WhatsApp</strong>.</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-inner">
+          <div class="hero-card-header">
+            <div>
+              <div class="hero-card-title">Montaje real de Esencia de Niña</div>
+              <div style="font-size:0.78rem;opacity:0.8;">Lo que ves es lo que llevamos a tu fiesta.</div>
+            </div>
+            <div class="hero-card-tag">Real</div>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-label">Audio</span>
+              <span class="hero-stat-value">Subwoofers + tops</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-label">Luz</span>
+              <span class="hero-stat-value">LED + efectos</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-label">Estilo</span>
+              <span class="hero-stat-value">Cabina Esencia</span>
+            </div>
+          </div>
+
+          <div class="hero-img-wrapper">
+            <!-- una de tus fotos principales de montaje -->
+            <img src="img/montaje3.jpg" alt="Montaje de Sonido Esencia de Niña">
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= PAQUETES ================= -->
+  <section id="paquetes">
+    <div class="container">
+      <div class="section-kicker">Paquetes</div>
+      <h2 class="section-title">Elige el estilo que va con tu evento</h2>
+      <p class="section-subtitle">
+        Paquetes pensados para diferentes tamaños de fiesta. Los precios se ajustan según zona, horario y requerimientos,
+        te los compartimos directamente por WhatsApp.
+      </p>
+
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-inner">
+            <div class="card-tag">Paquete 1</div>
+            <h3 class="card-title">💎 Esencial</h3>
+            <div class="chip-row">
+              <span class="chip">Hasta ~80 personas</span>
+              <span class="chip">5 horas de servicio</span>
+            </div>
+            <ul>
+              <li>2 bocinas profesionales</li>
+              <li>Cabina de DJ Esencia</li>
+              <li>2 luces LED (cañón + multi efectos)</li>
+              <li>Animación para pastel y batucada</li>
+            </ul>
+            <p class="card-footer">Ideal para casas, terrazas y salones pequeños.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-inner">
+            <div class="card-tag">Paquete 2</div>
+            <h3 class="card-title">🎤 Estelar</h3>
+            <div class="chip-row">
+              <span class="chip">Hasta ~120 personas</span>
+              <span class="chip">5 horas de servicio</span>
+            </div>
+            <ul>
+              <li>Audio reforzado con subwoofer</li>
+              <li>Más iluminación ambiente</li>
+              <li>Máquina de humo</li>
+              <li>Animación de todo el evento</li>
+            </ul>
+            <p class="card-footer">Perfecto para jardines y carpas de hasta un terreno y medio.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-inner">
+            <div class="card-tag">Paquete 3</div>
+            <h3 class="card-title">🔥 Esencia Total</h3>
+            <div class="chip-row">
+              <span class="chip">Eventos grandes</span>
+              <span class="chip">5h + 1h extra incluida</span>
+            </div>
+            <ul>
+              <li>Audio completo con subwoofers extra</li>
+              <li>Más luces, lasers y efectos</li>
+              <li>Pantalla 50” para fotos o video</li>
+              <li>Micrófono inalámbrico para dinámicas</li>
+            </ul>
+            <p class="card-footer">Ideal para XV años, bodas y fiestas grandes.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-inner">
+            <div class="card-tag">Paquete 4</div>
+            <h3 class="card-title">👑 Esencia VIP</h3>
+            <div class="chip-row">
+              <span class="chip">Hasta ~250 personas</span>
+              <span class="chip">Montaje completo</span>
+            </div>
+            <ul>
+              <li>Audio profesional con 4 subs y 4 medios</li>
+              <li>Kit batucada, iluminación decorativa</li>
+              <li>DJ y cabina pixel</li>
+              <li>Pensado para eventos súper especiales</li>
+            </ul>
+            <p class="card-footer">Cuéntanos tu idea y lo ajustamos a tu fiesta.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALERÍA ================= -->
+  <section id="galeria">
+    <div class="container">
+      <div class="section-kicker">Montajes reales</div>
+      <h2 class="section-title">Así se ve Esencia de Niña en acción</h2>
+      <p class="section-subtitle">
+        Nada de fotos de catálogo: estos son montajes reales en eventos donde hemos puesto la música y el ambiente.
+      </p>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="img/montaje1.jpg" alt="Montaje Esencia de Niña en fiesta infantil">
+          <figcaption class="gallery-label">Fiesta infantil temática</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/montaje2.jpg" alt="Montaje Esencia de Niña en carpa">
+          <figcaption class="gallery-label">Evento en carpa</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/montaje3.jpg" alt="Montaje con luces y cabina Esencia">
+          <figcaption class="gallery-label">Luces y cabina Esencia</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/montaje4.jpg" alt="Montaje con audio completo">
+          <figcaption class="gallery-label">Montaje audio completo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OPINIONES ================= -->
+  <section id="opiniones">
+    <div class="container">
+      <div class="section-kicker">Opiniones reales</div>
+      <h2 class="section-title">Lo que dicen las familias que ya confiaron en nosotros</h2>
+      <p class="section-subtitle">
+        Estas reseñas son de eventos reales. Si quieres ver más opiniones auténticas, puedes visitar nuestro perfil de Google Maps.
+      </p>
+
+      <div class="testimonials-grid">
+        <article class="testimonial">
+          <div class="review-stars">★★★★★</div>
+          <p>
+            “Excelente servicio, puntuales y muy buena música. Animaron desde los niños hasta los abuelitos, todos se
+            la pasaron increíble. Los volvería a contratar.”
+          </p>
+          <div class="testimonial-name">– Cliente Google</div>
+        </article>
+
+        <article class="testimonial">
+          <div class="review-stars">★★★★★</div>
+          <p>
+            “Muy profesionales, llevaron todo el equipo que prometieron y respetaron los horarios. La cabina se ve
+            preciosa y las luces levantan muchísimo el ambiente.”
+          </p>
+          <div class="testimonial-name">– Cliente Google</div>
+        </article>
+
+        <article class="testimonial">
+          <div class="review-stars">★★★★★</div>
+          <p>
+            “La atención por WhatsApp fue súper clara. Hicieron caso a las canciones que les pedimos y cuidaron cada
+            detalle del evento. Mis invitados quedaron felices.”
+          </p>
+          <div class="testimonial-name">– Cliente Google</div>
+        </article>
+      </div>
+
+      <div class="maps-cta">
+        <span>¿Quieres ver más reseñas reales de nuestro trabajo?</span>
+        <a
+          href="https://maps.app.goo.gl/utZybei1a3Fh5xgEA"
+          target="_blank"
+          rel="noopener"
+          class="btn-secondary"
+        >
+          Ver más opiniones en Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section id="contacto">
+    <div class="container">
+      <div class="section-kicker">Contacto</div>
+      <h2 class="section-title">Aparta tu fecha con Esencia de Niña</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>
+            Envíanos un mensaje con la fecha, zona y tipo de evento y te respondemos lo antes posible con la
+            disponibilidad y la propuesta ideal para tu fiesta.
+          </p>
+
+          <div class="contact-row">
+            <strong>WhatsApp:</strong> 55 7286 2663
+          </div>
+          <div class="contact-row">
+            <strong>Zona:</strong> CIUDAD NEZAHUALCOYOTL ZONA ORIENTE 
+          </div>
+
+          <div class="contact-actions">
+            <a
+              href="https://wa.me/525572862663?text=Hola%20quiero%20cotizar%20un%20evento%20con%20Sonido%20Esencia%20de%20Ni%C3%B1a"
+              class="btn"
+              target="_blank"
+              rel="noopener"
+            >
+              Escribir por WhatsApp
+            </a>
+            <a
+              href="https://maps.app.goo.gl/utZybei1a3Fh5xgEA"
+              class="btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              Ver ubicación y reseñas
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/Sonidowhitegirl" target="_blank" rel="noopener">
+              Facebook: Sonido White Girl
+            </a>
+            <a href="https://www.instagram.com/djaivanx/" target="_blank" rel="noopener">
+              Instagram: @djaivanx
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="hero-img-wrapper">
+            <img src="img/montaje2.jpg" alt="Montaje de audio y luces de Esencia de Niña">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Sonido Esencia de Niña. Todos los derechos reservados.</p>
+    <p>Imágenes y reseñas 100 % reales de nuestros eventos.</p>
+  </div>
+</footer>
+
+<script>
+  // Año dinámico
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
